@@ -20,15 +20,6 @@ import os
 import numpy as np
 import pandas as pd
 
-from scipy import stats
-from statsmodels.stats.multitest import multipletests  # This should now work after installation
-
-from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler
-
-import matplotlib.pyplot as plt  # This should now work after installing matplotlib
-import plotly.graph_objects as go  # This should now work after installing plotly
-
 
 # #### 1. Load data and convert #NUM! to missing values
 
@@ -493,7 +484,6 @@ import os
 import re
 import numpy as np
 import pandas as pd
-import plotly.graph_objects as go
 
 # ============================================================
 # Volcano plot for mBola3-Dox vs NoDox
@@ -510,7 +500,6 @@ os.makedirs(OUTDIR, exist_ok=True)
 # This assumes your differential analysis dataframe is called `results`
 # and contains: log2FC, pval, FDR
 
-res_dox_df = results.copy()
 
 # Standardized column names for this plot
 fc_col = "log2fc_DOX_vs_NODOX"
@@ -542,7 +531,7 @@ title_font_size = 22
 legend_font_size = 15
 
 # Edit this list as needed
-label_genes = [
+#label_genes = [
     "BOLA3",
     "FDXR",
     "HK1",
@@ -551,7 +540,7 @@ label_genes = [
     "NDUFAF2"
 ]
 
-label_genes = sorted(set([g.upper() for g in label_genes]))
+#label_genes = sorted(set([g.upper() for g in label_genes]))
 
 
 # In[27]:
